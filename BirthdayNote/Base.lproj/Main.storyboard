@@ -83,7 +83,7 @@
                         <outlet property="birthdayLabel" destination="58G-Za-h9g" id="9M6-Aq-mza"/>
                         <outlet property="birthdayTextField" destination="Bcz-3P-OvF" id="5a7-WB-bZ0"/>
                         <outlet property="nameLabel" destination="kqv-fx-80J" id="xqD-9l-C8L"/>
-                        <outlet property="nameTextField" destination="Bcz-3P-OvF" id="PFv-Pv-b7N"/>
+                        <outlet property="nameTextField" destination="2V2-DA-bBC" id="BW6-wM-dmc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
