@@ -11,6 +11,7 @@ class ViewController: UIViewController {
 
     // Properties
     var timer = Timer()
+    var hideTimer = Timer()
     var counter = 0
     var score = 0
     var swiperArray = [UIImageView]()
@@ -73,13 +74,13 @@ class ViewController: UIViewController {
         CountTimer.text = String(counter)
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
-        
+        hideTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(hideSwiper), userInfo: nil, repeats: true)
 
         hideSwiper()
         
     }
     
-    func hideSwiper() {
+    @objc func hideSwiper() {
         
         for swiper in swiperArray {
             swiper.isHidden = true
@@ -102,6 +103,11 @@ class ViewController: UIViewController {
         
         if counter == 0 {
             timer.invalidate()
+            hideTimer.invalidate()
+            
+            for swiper in swiperArray {
+                swiper.isHidden = true
+            }
             
             // Alert
             let alert = UIAlertController(title: "Time's up", message: "Do you wan't to play again?", preferredStyle: UIAlertController.Style.alert)
