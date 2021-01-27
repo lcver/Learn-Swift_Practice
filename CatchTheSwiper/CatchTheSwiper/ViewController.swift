@@ -8,14 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var CountTimer: UILabel!
-    
-    
+
+    // Properties
+    var timer = Timer()
+    var counter = 0
     var score = 0
+    
+    // Views
+    @IBOutlet weak var CountTimer: UILabel!
     @IBOutlet weak var ScoreNow: UILabel!
     @IBOutlet weak var Highscore: UILabel!
-    
-    
     @IBOutlet weak var Swiper1: UIImageView!
     @IBOutlet weak var Swiper2: UIImageView!
     @IBOutlet weak var Swiper3: UIImageView!
@@ -32,6 +34,7 @@ class ViewController: UIViewController {
         
         ScoreNow.text = "Score : \(score)"
         
+        // Images
         Swiper1.isUserInteractionEnabled = true
         Swiper2.isUserInteractionEnabled = true
         Swiper3.isUserInteractionEnabled = true
@@ -62,10 +65,43 @@ class ViewController: UIViewController {
         Swiper8.addGestureRecognizer(recognizer8)
         Swiper9.addGestureRecognizer(recognizer9)
         
+        // Timer
+        counter = 10
+        CountTimer.text = String(counter)
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
+        
     }
     
     @objc func increaseScore() {
+        score += 1
+        ScoreNow.text = "Score : \(score)"
+    }
+    
+    @objc func countDown() {
+        counter -= 1
+        CountTimer.text = String(counter)
         
+        if counter == 0 {
+            timer.invalidate()
+            
+            // Alert
+            let alert = UIAlertController(title: "Time's up", message: "Do you wan't to play again?", preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
+            
+            let replayButton = UIAlertAction(title: "Replay", style: UIAlertAction.Style.default) { (UIAlertAction) in
+                // Replay Function
+                
+                
+            }
+            
+            alert.addAction(okButton)
+            alert.addAction(replayButton)
+            self.present(alert, animated: true, completion: nil)
+            
+            
+            
+        }
     }
 
 
