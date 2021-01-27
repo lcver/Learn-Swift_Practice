@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CatchTheSwiper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gu7-RE-Aw6">
+                                <rect key="frame" x="186" y="80" width="43" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kisspng-swiper-no-swiping-baby-jaguar-drawing-5b1d5e817f69f5.2643074415286513935219" translatesAutoresizingMaskIntoConstraints="NO" id="c3b-Uf-PBq">
+                                <rect key="frame" x="20" y="260" width="124" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kisspng-swiper-no-swiping-baby-jaguar-drawing-5b1d5e817f69f5.2643074415286513935219" translatesAutoresizingMaskIntoConstraints="NO" id="yy2-u1-NvT">
+                                <rect key="frame" x="152" y="260" width="124" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kisspng-swiper-no-swiping-baby-jaguar-drawing-5b1d5e817f69f5.2643074415286513935219" translatesAutoresizingMaskIntoConstraints="NO" id="rF8-y2-FSs">
+                                <rect key="frame" x="270" y="260" width="124" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kisspng-swiper-no-swiping-baby-jaguar-drawing-5b1d5e817f69f5.2643074415286513935219" translatesAutoresizingMaskIntoConstraints="NO" id="7hx-Ps-iao">
+                                <rect key="frame" x="20" y="396" width="124" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kisspng-swiper-no-swiping-baby-jaguar-drawing-5b1d5e817f69f5.2643074415286513935219" translatesAutoresizingMaskIntoConstraints="NO" id="Ax9-ZF-rdV">
+                                <rect key="frame" x="152" y="396" width="124" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kisspng-swiper-no-swiping-baby-jaguar-drawing-5b1d5e817f69f5.2643074415286513935219" translatesAutoresizingMaskIntoConstraints="NO" id="D8N-3y-LuP">
+                                <rect key="frame" x="270" y="396" width="124" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kisspng-swiper-no-swiping-baby-jaguar-drawing-5b1d5e817f69f5.2643074415286513935219" translatesAutoresizingMaskIntoConstraints="NO" id="U8q-c1-2kA">
+                                <rect key="frame" x="20" y="532" width="124" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kisspng-swiper-no-swiping-baby-jaguar-drawing-5b1d5e817f69f5.2643074415286513935219" translatesAutoresizingMaskIntoConstraints="NO" id="hDB-WO-mZH">
+                                <rect key="frame" x="152" y="532" width="124" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kisspng-swiper-no-swiping-baby-jaguar-drawing-5b1d5e817f69f5.2643074415286513935219" translatesAutoresizingMaskIntoConstraints="NO" id="74L-wE-5rl">
+                                <rect key="frame" x="270" y="532" width="124" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txP-y2-Ull">
+                                <rect key="frame" x="149" y="171" width="116" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Highscore : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQd-GR-OZs">
+                                <rect key="frame" x="119" y="720" width="177" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="CountTimer" destination="Gu7-RE-Aw6" id="8EY-Fg-25k"/>
+                        <outlet property="Highscore" destination="aQd-GR-OZs" id="dpX-zQ-7KE"/>
+                        <outlet property="ScoreNow" destination="txP-y2-Ull" id="eZj-O2-x7t"/>
+                        <outlet property="Swiper1" destination="c3b-Uf-PBq" id="LjS-19-R1g"/>
+                        <outlet property="Swiper2" destination="yy2-u1-NvT" id="Dlo-eG-TWM"/>
+                        <outlet property="Swiper3" destination="rF8-y2-FSs" id="9Kw-8E-B0D"/>
+                        <outlet property="Swiper4" destination="7hx-Ps-iao" id="oi1-Vc-Vrk"/>
+                        <outlet property="Swiper5" destination="Ax9-ZF-rdV" id="OFt-aC-svZ"/>
+                        <outlet property="Swiper6" destination="D8N-3y-LuP" id="5mi-A1-8kG"/>
+                        <outlet property="Swiper7" destination="U8q-c1-2kA" id="QWv-Nu-dyL"/>
+                        <outlet property="Swiper8" destination="hDB-WO-mZH" id="pae-bb-BVq"/>
+                        <outlet property="Swiper9" destination="74L-wE-5rl" id="6tN-bj-nwc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="531.8840579710145" y="66.964285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="kisspng-swiper-no-swiping-baby-jaguar-drawing-5b1d5e817f69f5.2643074415286513935219" width="500" height="523"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
