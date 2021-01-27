@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var timer = Timer()
     var counter = 0
     var score = 0
+    var swiperArray = [UIImageView]()
     
     // Views
     @IBOutlet weak var CountTimer: UILabel!
@@ -65,11 +66,28 @@ class ViewController: UIViewController {
         Swiper8.addGestureRecognizer(recognizer8)
         Swiper9.addGestureRecognizer(recognizer9)
         
+        swiperArray = [Swiper1, Swiper2, Swiper3, Swiper4, Swiper5, Swiper6, Swiper7, Swiper8, Swiper9]
+        
         // Timer
         counter = 10
         CountTimer.text = String(counter)
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
+        
+
+        hideSwiper()
+        
+    }
+    
+    func hideSwiper() {
+        
+        for swiper in swiperArray {
+            swiper.isHidden = true
+        }
+        
+        let random = Int(arc4random_uniform(UInt32(swiperArray.count - 1)))
+        
+        swiperArray[random].isHidden = false
         
     }
     
@@ -88,18 +106,14 @@ class ViewController: UIViewController {
             // Alert
             let alert = UIAlertController(title: "Time's up", message: "Do you wan't to play again?", preferredStyle: UIAlertController.Style.alert)
             let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
-            
             let replayButton = UIAlertAction(title: "Replay", style: UIAlertAction.Style.default) { (UIAlertAction) in
                 // Replay Function
-                
                 
             }
             
             alert.addAction(okButton)
             alert.addAction(replayButton)
             self.present(alert, animated: true, completion: nil)
-            
-            
             
         }
     }
