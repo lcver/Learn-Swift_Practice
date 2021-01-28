@@ -10,6 +10,8 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    var carsName = [String]()
+    var carsImage = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,13 +19,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         
-        var carsName = [String]()
+        // Name
         carsName.append("gtr-pandem")
         carsName.append("gtr-libertywalk")
         carsName.append("chevrolet")
         carsName.append("mazda-rx7-red")
         
-        var carsImage = [UIImage]()
+        // Images
         carsImage.append(UIImage(named: "gtr-pandem")!)
         carsImage.append(UIImage(named: "gtr-libertywalk")!)
         carsImage.append(UIImage(named: "chevrolet")!)
@@ -34,12 +36,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "test \(indexPath.row)"
+        cell.textLabel?.text = "\(carsName[indexPath.row])"
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return carsName.count
     }
 
 
