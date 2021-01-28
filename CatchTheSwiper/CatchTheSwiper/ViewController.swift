@@ -124,8 +124,9 @@ class ViewController: UIViewController {
             }
             
             if score > highscore {
+                highscore = score
                 Highscore.text = "Highsocre : \(highscore)"
-                UserDefaults.standard.setValue(highscore, forKey: "Highscore")
+                UserDefaults.standard.set(self.highscore, forKey: "Highscore")
             }
             
             // Alert
