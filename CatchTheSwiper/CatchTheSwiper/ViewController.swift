@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var counter = 0
     var score = 0
     var swiperArray = [UIImageView]()
+    var highscore = 0
     
     // Views
     @IBOutlet weak var CountTimer: UILabel!
@@ -35,6 +36,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         ScoreNow.text = "Score : \(score)"
+        
+        // Highscore check
+        let storedHighScore = UserDefaults.standard.object(forKey: "Highscore")
+        
+        if storedHighScore == nil {
+            highscore = 0
+            Highscore.text = "Highscore: \(highscore)"
+        }
+        
+        if let newScore = storedHighScore as? Int {
+            highscore = newScore
+            Highscore.text = "Highscore : \(highscore)"
+        }
         
         // Images
         Swiper1.isUserInteractionEnabled = true
@@ -107,6 +121,11 @@ class ViewController: UIViewController {
             
             for swiper in swiperArray {
                 swiper.isHidden = true
+            }
+            
+            if score > highscore {
+                Highscore.text = "Highsocre : \(highscore)"
+                UserDefaults.standard.setValue(highscore, forKey: "Highscore")
             }
             
             // Alert
