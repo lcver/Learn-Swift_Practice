@@ -12,6 +12,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     var carsName = [String]()
     var carsImage = [UIImage]()
+    var choseCarName = ""
+    var choseCarImage = UIImage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,9 +55,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        choseCarName = carsName[indexPath.row]
+        choseCarImage = carsImage[indexPath.row]
+
         performSegue(withIdentifier: "toImageVC", sender: nil)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toImageVC" {
+            let destinationVC = segue.destination as! ImageViewController
+            destinationVC.selectedCarName = choseCarName
+            destinationVC.selectedCarImage = choseCarImage
+        }
+    }
 
 }
 

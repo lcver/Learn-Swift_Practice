@@ -11,10 +11,15 @@ class ImageViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    
+    var selectedCarName = ""
+    var selectedCarImage = UIImage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        nameLabel.text = selectedCarName
+        imageView.image = selectedCarImage
     }
     
 
