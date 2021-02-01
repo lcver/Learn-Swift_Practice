@@ -36,6 +36,10 @@ class Musician {
         type = typeInit
     }
     
+    func sing() {
+        print("nothing else matters")
+    }
+    
     func showMusician() {
         print(self.name)
         print(self.age)
