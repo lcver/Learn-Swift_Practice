@@ -11,8 +11,8 @@ print("Hello, World!")
 
 let james = Musician(nameInit: "James Netflix", ageInit: 50, instrumentInit: "Bass", typeInit: .Vocalist)
 //print(james.type)
-//james.sing()
+james.sing()
 
 let kirk = SuperMusician(nameInit: "Kirk", ageInit: 55, instrumentInit: "Gitar", typeInit: .LeadGuitar)
-kirk.sing()
+//kirk.sing()
 //kirk.sing2()
