@@ -9,12 +9,7 @@ import Foundation
 
 print("Hello, World!")
 
-let james = Musician()
-
-//james.age = 30
-//james.Name = "James Netflix"
-//james.instrument = "Bass"
-//
-//
-//james.showMusician()
+let james = Musician(nameInit: "James Netflix", ageInit: 50, instrumentInit: "Bass", typeInit: .Vocalist)
 print(james.age)
+print(james.type)
+
